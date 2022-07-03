@@ -1,0 +1,26 @@
+<app-main-search></app-main-search>
+<!-- Main Body -->
+<div class="container mt-5 mb-5">
+    <h2 class="mb-4">
+        Frequently Asked Questions
+    </h2>
+    <p>
+        Here you will find answers to the most frequently asked questions.
+    </p>
+    <!-- accordation panel -->
+    <ngb-accordion [closeOthers]="true" *ngFor="let faq of faq_question">
+        <ngb-panel title="{{faq.question}}">
+            <ng-template ngbPanelContent>
+                {{faq.answer}}
+            </ng-template>
+        </ngb-panel>
+    </ngb-accordion>
+    <!-- Accordation panel ends -->
+
+    <h3 class="mt-5">Haven’t found the answer to your question?</h3>
+    <div class="not-found shadow-sm">
+        <p class="email-text">Simply contact us at <b>test@gmail.com</b>. Thank you.</p>
+    </div>
+
+</div>
+<!-- Main Body Ends -->

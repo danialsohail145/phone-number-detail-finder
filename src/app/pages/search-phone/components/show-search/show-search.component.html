@@ -1,0 +1,33 @@
+<app-main-search [setPhoneNumber]="phoneNumber"></app-main-search>
+<!-- Main body -->
+<div class="container mb-5 mt-5">
+    <div class="mb-5">
+        <h1 class="mb-4">
+            Telephone number: +{{phoneNumber}}
+        </h1>
+        <h3>
+            (0{{phoneNumber}}, 00{{phoneNumber}})
+        </h3>
+
+        <div>
+            <h3>Comments on the number +{{phoneNumber}}</h3>
+        </div>
+    </div>
+
+
+
+    <div class="card mb-2 rounded" *ngFor="let comments of comments">
+        <div class="card-body">
+            <span class="d-flex justify-content-end mb-2 "><a class="pe-auto"><i
+                        class="fa-regular fa-circle-xmark "></i></a></span>
+            <p>{{comments.comment}}</p>
+            <span [innerHTML]="comments.type | comment">
+            </span>
+            <span class="ml-3">
+                {{comments.date}}
+            </span>
+        </div>
+    </div>
+
+</div>
+<!-- Main body Ends -->

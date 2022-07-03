@@ -1,0 +1,30 @@
+<div class="tob-bar pt-5 ">
+    <div class="card-overlay">
+        <img src="/assets/images/banner/banner.jpg" class="big-img">
+    </div>
+    <div class="centered">
+        <form [formGroup]="searchForm">
+            <div class="row">
+                <div class="col-md-8 col-12">
+                    <div class="form-group ">
+                        <input type="text" class="form-control search-form-control" id="search"
+                            placeholder="+44 (0123) 456 789" [formControl]='phoneNumberControl'>
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+                    <button class="btn btn-primary text-white search-form-control"
+                        (click)="submitSearch()">Search</button>
+                </div>
+            </div>
+            <div class="row">
+                <app-form-error [formErrorMessage]="'Enter Valid Phone Number'" [control]="phoneNumberControl">
+                </app-form-error>
+            </div>
+        </form>
+
+    </div>
+</div>
+<app-toast aria-live="polite" aria-atomic="true"></app-toast>
+<app-spinner [isloaded]="isLoaded"></app-spinner>

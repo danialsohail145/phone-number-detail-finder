@@ -1,0 +1,32 @@
+<div class="nav-bar" (scroll)="onScroll($event)">
+    <!-- <div [ngClass]="showSideBar ? 'side-animation slide-in': 'side-animation slide-out'">
+        <app-side-bar [isActive]="firstActive" (notActive)="addItem($event)"></app-side-bar>
+    </div> -->
+    <nav>
+        <div class="container">
+            <div class="d-flex mt-3">
+                <!-- <div class="col-2 mt-2 cursor-pointer text-white">
+                    <h3 (click)="activeSidebar()"><i class="fa fa-bars"></i></h3>
+                </div> -->
+                <div class="col-12 text-left">
+                    <img src="/assets/images/logo/logo.png" width="100px" [routerLink]="''">
+                    <!-- <h5 class="text-white mt-2">Perkss Admin Portal</h5> -->
+                </div>
+                <!-- <div class="col-2 mt-2 text-white">
+                    <h3>
+                        <button class="btn btn-light w-75 rounded-pill text-dark">Logout <i class="fa fa-sign-out"></i>
+                        </button>
+                        <i class="fa fa-user" (click)="$event.stopPropagation(); myDrop.open();"></i>
+                        <div ngbDropdown class="d-inline-block" #myDrop="ngbDropdown">
+                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                <button ngbDropdownItem class="brand-color" disabled="">{{this.brandFlavor |
+                                    uppercase}}</button>
+                                <button ngbDropdownItem>Logout <i class="fa fa-sign-out"></i> </button>
+                            </div>
+                        </div>
+                    </h3>
+                </div> -->
+            </div>
+        </div>
+    </nav>
+</div>

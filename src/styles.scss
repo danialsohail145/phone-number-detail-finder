@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "./assets/scss/variable.scss";
+@import "~bootstrap/scss/bootstrap";
+html {
+  margin: 0%;
+  padding: 0%;
+  background-color: white;
+}
+body {
+  font-family: "Quicksand", sans-serif;
+  margin: 0%;
+  padding: 0%;
+  background-color: #f5f5f5;
+}
